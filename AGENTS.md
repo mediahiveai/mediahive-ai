@@ -1,5 +1,20 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# MediaHive AI
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+Vite + React + TypeScript + Tailwind CSS v4 + Framer Motion + **Claude (Anthropic)**.
+
+## Commands
+
+- `npm run dev` — site + Claude AI advisor (requires `.env` with `ANTHROPIC_API_KEY`)
+- `npm run dev:site` — website only, no Claude chat
+- `npm run build` — production build to `dist/`
+- `npm run preview` — preview production build
+
+## Claude Setup
+
+```bash
+cp .env.example .env
+# Add your key from https://console.anthropic.com/
+npm run dev
+```
+
+Chat bubble appears bottom-right on the site.

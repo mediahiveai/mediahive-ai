@@ -19,6 +19,10 @@
 
 # production
 /build
+/dist
+
+# vite
+vite.config.ts.timestamp-*
 
 # misc
 .DS_Store
@@ -31,7 +35,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+.env
+.env.local
+.env.*.local
+!.env.example
 
 # vercel
 .vercel
