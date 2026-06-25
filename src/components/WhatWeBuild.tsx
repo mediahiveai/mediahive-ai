@@ -19,7 +19,7 @@ function PillarImage({ src, alt }: { src: string; alt: string }) {
 
 export function WhatWeBuild() {
   return (
-    <section id="services" className="bg-black py-20 text-white sm:py-28">
+    <section id="services" className="border-y border-black/5 bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,11 +27,12 @@ export function WhatWeBuild() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <p className="section-label text-rye">Services</p>
-          <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
-            Everything your business needs to win online.
+          <p className="section-label">Services</p>
+          <h2 className="mt-4 font-display text-3xl font-extrabold text-black sm:text-4xl md:text-5xl">
+            Everything your business needs to{" "}
+            <span className="gradient-text-enterprise">win online.</span>
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/60">
+          <p className="mt-5 text-base leading-relaxed text-ink-muted">
             Websites, web apps, CRM systems, marketing agency infrastructure, AI automation,
             SEO, and brand redesign — scoped to your requirements and integrated with your stack.
           </p>
@@ -45,20 +46,20 @@ export function WhatWeBuild() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-rye/30"
+              className="group card-rye overflow-hidden"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-zinc-200">
+              <div className="aspect-[16/10] overflow-hidden bg-surface-2">
                 <PillarImage src={s.image} alt={s.title} />
               </div>
               <div className="p-7">
                 <span className="inline-block rounded-full bg-rye px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-black">
                   {s.tag}
                 </span>
-                <h3 className="mt-4 font-display text-xl font-bold">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/60">{s.desc}</p>
-                <ul className="mt-5 space-y-2 border-t border-white/10 pt-5">
+                <h3 className="mt-4 font-display text-xl font-bold text-black">{s.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
+                <ul className="mt-5 space-y-2 border-t border-black/5 pt-5">
                   {s.deliverables.map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-sm text-white/80">
+                    <li key={d} className="flex items-start gap-2 text-sm text-ink">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rye" />
                       {d}
                     </li>

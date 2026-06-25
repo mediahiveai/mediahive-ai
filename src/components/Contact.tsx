@@ -30,7 +30,7 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="section-label text-rye">Contact</p>
+            <p className="section-label">Contact</p>
             <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
               Tell us what you&apos;re building?
             </h2>

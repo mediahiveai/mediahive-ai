@@ -23,8 +23,8 @@ export function Deployments() {
               onClick={() => setIdx(i)}
               className={`shrink-0 rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
                 i === idx
-                  ? "border-black bg-black text-white"
-                  : "border-black/10 bg-white text-ink-muted hover:border-black/30 hover:text-black"
+                  ? "border-rye bg-rye text-black shadow-sm"
+                  : "border-black/10 bg-white text-ink-muted hover:border-rye/40 hover:text-black"
               }`}
             >
               {dep.org}

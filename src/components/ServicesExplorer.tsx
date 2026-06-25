@@ -24,7 +24,7 @@ export function ServicesExplorer() {
   const item = whatWeBuild.find((w) => w.id === active)!;
 
   return (
-    <section id="platform" className="border-y border-black/5 bg-white py-20 sm:py-28">
+    <section id="platform" className="border-y border-black/5 bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="max-w-3xl">
           <p className="section-label">Enterprise Delivery</p>
@@ -49,8 +49,8 @@ export function ServicesExplorer() {
                 className={cn(
                   "w-[200px] shrink-0 rounded-2xl border px-4 py-4 text-left transition-all duration-300 sm:w-[220px] lg:w-full",
                   active === w.id
-                    ? "border-black/20 bg-surface shadow-sm"
-                    : "border-black/8 bg-white hover:border-black/15 hover:bg-surface/60"
+                    ? "border-rye/60 bg-rye/10 shadow-sm ring-1 ring-rye/20"
+                    : "border-black/8 bg-white hover:border-rye/30 hover:bg-white"
                 )}
               >
                 <p className="text-[10px] font-bold uppercase tracking-widest text-ink-light">
@@ -68,7 +68,7 @@ export function ServicesExplorer() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.25 }}
-              className="overflow-hidden rounded-2xl border border-black/8 bg-surface shadow-sm"
+              className="overflow-hidden rounded-2xl border border-black/8 bg-white shadow-sm"
             >
               <div className="relative aspect-[16/7] overflow-hidden bg-zinc-200">
                 <ServiceImage src={item.image} alt={item.title} />

@@ -34,7 +34,9 @@ export function FAQ() {
               >
                 <span className="pr-4 text-sm font-semibold text-black">{f.q}</span>
                 <span
-                  className={`shrink-0 text-lg font-light text-ink-light transition ${open === i ? "rotate-45" : ""}`}
+                  className={`shrink-0 text-xl font-light transition ${
+                    open === i ? "rotate-45 text-rye" : "text-ink-light"
+                  }`}
                 >
                   +
                 </span>

@@ -35,7 +35,7 @@ export function Metrics() {
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-5 sm:px-6 md:grid-cols-4 md:gap-12">
         {metrics.map((m) => (
           <div key={m.label} className="text-center">
-            <p className="font-display text-5xl font-extrabold text-black md:text-6xl">
+            <p className="font-display text-5xl font-extrabold text-rye md:text-6xl">
               <Counter value={m.value} suffix={m.suffix} />
             </p>
             <p className="mt-2 text-sm font-medium text-ink-muted">{m.label}</p>

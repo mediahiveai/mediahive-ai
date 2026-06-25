@@ -15,7 +15,7 @@ export function Capabilities() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <p className="section-label text-rye">Services</p>
+          <p className="section-label">Services</p>
           <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
             Full-stack enterprise delivery.
           </h2>
@@ -52,7 +52,7 @@ export function Capabilities() {
         >
           {enterpriseStats.map((stat) => (
             <div key={stat.label} className="text-center md:text-left">
-              <p className="font-display text-4xl font-extrabold text-white sm:text-5xl">
+              <p className="font-display text-4xl font-extrabold text-rye sm:text-5xl">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm text-white/50">{stat.label}</p>

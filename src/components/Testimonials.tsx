@@ -26,7 +26,7 @@ export function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.35 }}
-              className="card-rye p-10 text-center sm:p-14"
+              className="card-rye border-l-4 border-l-rye p-10 text-center sm:p-14"
             >
               <p className="font-display text-xl font-bold leading-relaxed text-black sm:text-2xl md:text-3xl">
                 &ldquo;{t.quote}&rdquo;

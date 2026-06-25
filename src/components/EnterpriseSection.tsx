@@ -38,7 +38,8 @@ export function EnterpriseSection() {
           >
             <p className="section-label">Enterprise</p>
             <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-black sm:text-4xl md:text-5xl">
-              Intelligence systems for global organisations.
+              Intelligence systems for{" "}
+              <span className="gradient-text-enterprise">global organisations.</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-ink-muted">
               Trusted by HSBC, NHS England, Tower Hamlets — London Borough Council —

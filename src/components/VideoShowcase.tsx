@@ -21,7 +21,7 @@ export function VideoShowcase() {
   };
 
   return (
-    <section id="videos" className="bg-white py-20 sm:py-28">
+    <section id="videos" className="border-y border-black/5 bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="max-w-3xl">
           <p className="section-label">Platform Overview</p>

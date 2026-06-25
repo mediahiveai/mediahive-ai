@@ -6,7 +6,7 @@ import { divisions } from "@/lib/data";
 
 export function Divisions() {
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

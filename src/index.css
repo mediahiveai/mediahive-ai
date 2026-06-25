@@ -67,11 +67,11 @@ input, textarea, select, button {
 }
 
 .gradient-text {
-  color: var(--color-ink-muted);
+  color: var(--color-rye-dark);
 }
 
 .gradient-text-enterprise {
-  background: linear-gradient(135deg, #0066ff 0%, #6366f1 50%, #9333ea 100%);
+  background: linear-gradient(135deg, #c99700 0%, #fec300 45%, #ffe066 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -90,10 +90,12 @@ input, textarea, select, button {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-black);
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(254, 195, 0, 0.25);
 }
 .btn-rye:hover {
   background: var(--color-rye-dark);
+  box-shadow: 0 4px 20px rgba(254, 195, 0, 0.35);
 }
 
 .btn-dark {
@@ -109,10 +111,11 @@ input, textarea, select, button {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: white;
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 .btn-dark:hover {
   background: #222;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 .section-label {
@@ -120,17 +123,18 @@ input, textarea, select, button {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-ink-light);
+  color: var(--color-rye-dark);
 }
 
 .card-rye {
   border-radius: 1.5rem;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
 }
 .card-rye:hover {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border-color: rgba(254, 195, 0, 0.25);
 }
 
 @keyframes marquee {

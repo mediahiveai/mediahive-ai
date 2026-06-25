@@ -15,7 +15,7 @@ const edges = [
 
 export function PlatformCanvas() {
   return (
-    <section id="architecture" className="relative overflow-hidden border-y border-black/5 bg-surface py-20 sm:py-28">
+    <section id="architecture" className="relative overflow-hidden border-y border-black/5 bg-white py-20 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,8 +62,9 @@ export function PlatformCanvas() {
             })}
             <defs>
               <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#0066ff" />
-                <stop offset="100%" stopColor="#9333ea" />
+                <stop offset="0%" stopColor="#e5b000" />
+                <stop offset="50%" stopColor="#fec300" />
+                <stop offset="100%" stopColor="#ffe066" />
               </linearGradient>
             </defs>
           </svg>
@@ -95,7 +96,7 @@ export function PlatformCanvas() {
                   <p className="text-sm font-semibold text-black">{node.label}</p>
                 </div>
                 {i < platformNodes.length - 1 && (
-                  <div className="my-1.5 h-5 w-px bg-gradient-to-b from-[#0066ff]/50 to-[#9333ea]/50" />
+                  <div className="my-1.5 h-5 w-px bg-gradient-to-b from-rye-dark/60 to-rye/40" />
                 )}
               </div>
             ))}

@@ -16,8 +16,8 @@ export function CorporateSection() {
         >
           <p className="section-label text-rye">Corporate</p>
           <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">
-            We do not do average. We take ambitious businesses and build them into
-            digital brands that dominate their market.
+            We do not do average. We build{" "}
+            <span className="gradient-text-enterprise">brands that dominate.</span>
           </h2>
         </motion.div>
 

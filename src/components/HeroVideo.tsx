@@ -6,7 +6,8 @@ import { ClientLogos } from "./ClientLogos";
 export function HeroVideo() {
   return (
     <section className="relative overflow-hidden bg-surface pt-28 pb-16 sm:pt-36 sm:pb-24">
-      <div className="mx-auto max-w-5xl px-5 text-center sm:px-6">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(254,195,0,0.12),transparent)]" />
+      <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -15,7 +16,7 @@ export function HeroVideo() {
           <h1 className="font-display text-[2.5rem] font-extrabold leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl lg:text-[5.5rem]">
             Building Intelligence
             <br />
-            that <span className="text-ink-muted">Wins!</span>
+            that <span className="text-rye">Wins!</span>
           </h1>
 
           <a href="#contact" className="btn-dark mt-10 sm:mt-12">
