@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { Send, CheckCircle, Loader2, Mail, MapPin } from "lucide-react";
 import { CONTACT_EMAIL, submitContactForm } from "@/lib/contact";
 
 export function Contact() {
@@ -26,36 +26,38 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden border-t border-white/[0.06] bg-zinc-950 py-20 md:py-32">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_100%,rgba(0,102,255,0.08),transparent)]" />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="contact" className="bg-black py-20 text-white sm:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
-              Contact
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-              Partner with{" "}
-              <span className="gradient-text">MediaHive AI.</span>
+            <p className="section-label text-rye">Contact</p>
+            <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl md:text-5xl">
+              Tell us what you&apos;re building?
             </h2>
-            <p className="mt-5 text-sm leading-relaxed text-zinc-400 sm:text-base">
-              Speak with our enterprise team about websites, applications, CRM systems,
-              automation, and digital transformation. We respond within one business day.
+            <p className="mt-2 text-sm text-white/50">
+              Drop us a message and let&apos;s start the conversation.
             </p>
-            <div className="mt-8 space-y-3 border-t border-white/[0.06] pt-8">
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="block text-sm font-medium text-white hover:text-electric"
-              >
-                {CONTACT_EMAIL}
-              </a>
-              <p className="text-xs text-zinc-500">
-                Or fill in the form — your message goes straight to our inbox.
-              </p>
-              <p className="text-xs text-zinc-500">
-                Enterprise programmes from £50,000 · Global delivery
-              </p>
+
+            <div className="mt-10 space-y-6">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-white/40">
+                  Got a project in mind?
+                </p>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="mt-2 flex items-center gap-3 text-lg font-bold text-white hover:text-rye"
+                >
+                  <Mail className="h-5 w-5 text-rye" />
+                  {CONTACT_EMAIL}
+                </a>
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-white/40">On spot</p>
+                <p className="mt-2 flex items-center gap-3 text-sm text-white/70">
+                  <MapPin className="h-5 w-5 shrink-0 text-rye" />
+                  Global delivery · Enterprise programmes from £50k
+                </p>
+              </div>
             </div>
           </div>
 
@@ -63,16 +65,14 @@ export function Contact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-6 backdrop-blur-sm sm:p-8"
+            className="rounded-2xl bg-white p-6 text-black sm:p-8"
           >
             {sent ? (
               <div className="flex flex-col items-center py-10 text-center sm:py-12">
-                <CheckCircle className="h-10 w-10 text-electric" />
-                <p className="mt-4 font-display text-xl font-bold text-white">
-                  Message sent.
-                </p>
-                <p className="mt-2 text-sm text-zinc-400">
-                  Thank you — we&apos;ll reply to your email within one business day.
+                <CheckCircle className="h-10 w-10 text-rye" />
+                <p className="mt-4 font-display text-xl font-extrabold">Message sent.</p>
+                <p className="mt-2 text-sm text-ink-muted">
+                  Thank you — we&apos;ll reply within one business day.
                 </p>
               </div>
             ) : (
@@ -80,13 +80,13 @@ export function Contact() {
                 <input type="checkbox" name="botcheck" className="hidden" />
 
                 {[
-                  { id: "name", name: "name", label: "Full Name", required: true },
-                  { id: "company", name: "company", label: "Organisation", required: true },
-                  { id: "email", name: "email", label: "Work Email", type: "email", required: true },
-                  { id: "role", name: "role", label: "Role / Title", required: false },
+                  { id: "name", name: "name", label: "Name", required: true },
+                  { id: "email", name: "email", label: "Email", type: "email", required: true },
+                  { id: "phone", name: "phone", label: "Phone", required: false },
+                  { id: "company", name: "company", label: "Company", required: true },
                 ].map((f) => (
                   <div key={f.id}>
-                    <label htmlFor={f.id} className="mb-1.5 block text-xs font-medium text-zinc-400">
+                    <label htmlFor={f.id} className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-ink-light">
                       {f.label}{f.required && " *"}
                     </label>
                     <input
@@ -95,13 +95,13 @@ export function Contact() {
                       type={f.type || "text"}
                       required={f.required}
                       disabled={loading}
-                      className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3.5 text-base text-white outline-none transition focus:border-electric/40 disabled:opacity-50 sm:text-sm"
+                      className="w-full rounded-lg border border-black/10 bg-surface px-4 py-3.5 text-base text-black outline-none transition focus:border-rye focus:ring-2 focus:ring-rye/20 disabled:opacity-50 sm:text-sm"
                     />
                   </div>
                 ))}
                 <div>
-                  <label htmlFor="message" className="mb-1.5 block text-xs font-medium text-zinc-400">
-                    Project overview *
+                  <label htmlFor="message" className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-ink-light">
+                    Leave us a Message *
                   </label>
                   <textarea
                     id="message"
@@ -109,13 +109,13 @@ export function Contact() {
                     rows={4}
                     required
                     disabled={loading}
-                    placeholder="Tell us about your requirements — websites, apps, CRM, automation, etc."
-                    className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3.5 text-base text-white outline-none transition placeholder:text-zinc-600 focus:border-electric/40 disabled:opacity-50 sm:text-sm"
+                    placeholder="Tell us about your project — websites, apps, CRM, automation..."
+                    className="w-full rounded-lg border border-black/10 bg-surface px-4 py-3.5 text-base text-black outline-none transition placeholder:text-ink-light focus:border-rye focus:ring-2 focus:ring-rye/20 disabled:opacity-50 sm:text-sm"
                   />
                 </div>
 
                 {error && (
-                  <p className="rounded-xl border border-red-500/20 bg-red-500/10 px-3 py-2 text-xs text-red-400">
+                  <p className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs text-red-600">
                     {error}
                   </p>
                 )}
@@ -123,7 +123,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-white py-3.5 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-200 disabled:opacity-60"
+                  className="btn-rye flex min-h-[48px] w-full disabled:opacity-60"
                 >
                   {loading ? (
                     <>
@@ -132,7 +132,7 @@ export function Contact() {
                     </>
                   ) : (
                     <>
-                      Send Enquiry
+                      Send Message
                       <Send className="h-4 w-4" />
                     </>
                   )}

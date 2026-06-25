@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 56" fill="none" role="img" aria-label="MediaHive AI">
+  <g stroke="#F5C400" stroke-width="3.2" stroke-linejoin="round" fill="none">
+    <polygon points="35.97,32.60 28.00,37.20 20.03,32.60 20.03,23.40 28.00,18.80 35.97,23.40"/>
+    <polygon points="29.04,20.60 21.07,25.20 13.10,20.60 13.10,11.40 21.07,6.80 29.04,11.40"/>
+    <polygon points="42.90,20.60 34.93,25.20 26.96,20.60 26.96,11.40 34.93,6.80 42.90,11.40"/>
+    <polygon points="49.82,32.60 41.86,37.20 33.89,32.60 33.89,23.40 41.86,18.80 49.82,23.40"/>
+    <polygon points="42.90,44.60 34.93,49.20 26.96,44.60 26.96,35.40 34.93,30.80 42.90,35.40"/>
+    <polygon points="29.04,44.60 21.07,49.20 13.10,44.60 13.10,35.40 21.07,30.80 29.04,35.40"/>
+    <polygon points="22.11,32.60 14.14,37.20 6.18,32.60 6.18,23.40 14.14,18.80 22.11,23.40"/>
+  </g>
+  <text x="58" y="38" fill="#0A0A0A" font-family="Plus Jakarta Sans, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.5">mediahive</text>
+  <polygon points="226,6 236,12 236,22 226,28 216,22 216,12" fill="#F5C400"/>
+  <text x="226" y="21" fill="#0A0A0A" font-family="Plus Jakarta Sans, Arial, Helvetica, sans-serif" font-size="9" font-weight="800" text-anchor="middle">AI</text>
+</svg>

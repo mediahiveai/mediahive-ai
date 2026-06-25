@@ -2,37 +2,51 @@
 
 import { motion } from "framer-motion";
 import { industries } from "@/lib/data";
-import { Landmark, HeartPulse, Briefcase, Store, Dumbbell, Building2 } from "lucide-react";
+import { Briefcase, Heart, Landmark, Store } from "lucide-react";
 
-const icons = [Landmark, Building2, Dumbbell, HeartPulse, Briefcase, Store];
+const icons: Record<string, typeof Landmark> = {
+  landmark: Landmark,
+  briefcase: Briefcase,
+  heart: Heart,
+  store: Store,
+};
 
 export function Industries() {
   return (
-    <section id="industries" className="border-t border-zinc-200 bg-zinc-50 py-16 md:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-400">Verticals</p>
-        <h2 className="mt-3 font-display text-3xl font-bold text-zinc-900 sm:mt-4 sm:text-4xl md:text-5xl">
-          Proven across <span className="gradient-text">industries.</span>
-        </h2>
+    <section id="industries" className="bg-white py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <p className="section-label">Industries</p>
+          <h2 className="mt-4 font-display text-3xl font-extrabold text-black sm:text-4xl">
+            Trusted across every sector.
+          </h2>
+        </motion.div>
 
-        <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((ind, i) => {
-            const Icon = icons[i] ?? Building2;
+            const Icon = icons[ind.icon] || Briefcase;
             return (
               <motion.div
                 key={ind.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm transition hover:border-zinc-300 sm:p-7"
+                className="card-rye p-7"
               >
-                <Icon className="h-5 w-5 text-electric" />
-                <h3 className="mt-3 font-display text-lg font-bold text-zinc-900 sm:text-xl">
-                  {ind.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-500">{ind.desc}</p>
-                <p className="mt-4 text-xs font-semibold text-electric">{ind.stat}</p>
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-rye/20">
+                  <Icon className="h-5 w-5 text-black" />
+                </div>
+                <p className="mt-4 text-xs font-bold uppercase tracking-wider text-rye-dark">
+                  {ind.stat}
+                </p>
+                <h3 className="mt-2 font-display text-lg font-bold text-black">{ind.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{ind.desc}</p>
               </motion.div>
             );
           })}

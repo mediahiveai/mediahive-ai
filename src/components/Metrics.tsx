@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { metrics } from "@/lib/data";
 
-function Counter({ value, suffix, decimals = 0 }: { value: number; suffix: string; decimals?: number }) {
+function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const [n, setN] = useState(0);
@@ -21,24 +21,24 @@ function Counter({ value, suffix, decimals = 0 }: { value: number; suffix: strin
     requestAnimationFrame(tick);
   }, [inView, value]);
 
-  const display = decimals ? n.toFixed(decimals) : Math.round(n).toLocaleString();
-  return <span ref={ref}>{display}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {Math.round(n).toLocaleString()}
+      {suffix}
+    </span>
+  );
 }
 
 export function Metrics() {
   return (
-    <section className="border-y border-white/[0.06] bg-black py-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
+    <section className="bg-surface py-16 sm:py-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-5 sm:px-6 md:grid-cols-4 md:gap-12">
         {metrics.map((m) => (
           <div key={m.label} className="text-center">
-            <p className="font-display text-4xl font-bold text-white md:text-5xl">
-              <Counter
-                value={m.value}
-                suffix={m.suffix}
-                decimals={m.value % 1 !== 0 ? 1 : 0}
-              />
+            <p className="font-display text-5xl font-extrabold text-black md:text-6xl">
+              <Counter value={m.value} suffix={m.suffix} />
             </p>
-            <p className="mt-2 text-xs font-medium text-zinc-500">{m.label}</p>
+            <p className="mt-2 text-sm font-medium text-ink-muted">{m.label}</p>
           </div>
         ))}
       </div>

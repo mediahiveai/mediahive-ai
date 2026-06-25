@@ -1,86 +1,61 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { navLinks } from "@/lib/data";
-import { cn } from "@/lib/utils";
 
 export function Header() {
-  const [pastHero, setPastHero] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const fn = () => setPastHero(window.scrollY > window.innerHeight * 0.5);
-    window.addEventListener("scroll", fn, { passive: true });
-    fn();
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
-
-  const light = !pastHero;
-
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        light
-          ? "border-b border-zinc-200/80 bg-white/90 backdrop-blur-xl"
-          : "border-b border-white/[0.06] bg-zinc-950/90 backdrop-blur-xl"
-      )}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-surface/95 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6">
         <a href="#">
-          <Logo theme={light ? "light" : "dark"} />
+          <Logo theme="light" />
         </a>
-        <nav className="hidden items-center gap-8 md:flex">
+
+        <nav className="hidden items-center gap-8 lg:flex">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className={cn(
-                "text-[13px] font-medium transition",
-                light ? "text-zinc-500 hover:text-zinc-900" : "text-zinc-400 hover:text-white"
-              )}
+              className="text-sm font-medium text-ink-muted transition hover:text-black"
             >
               {l.label}
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className={cn(
-            "hidden rounded-full px-5 py-2 text-[13px] font-semibold transition md:inline-flex",
-            light ? "bg-zinc-900 text-white hover:bg-zinc-800" : "bg-white text-zinc-900 hover:bg-zinc-200"
-          )}
-        >
-          Contact Us
-        </a>
-        <button
-          className={cn("md:hidden", light ? "text-zinc-900" : "text-white")}
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+
+        <div className="flex items-center gap-3">
+          <a href="#contact" className="btn-rye hidden sm:inline-flex">
+            Get in touch
+          </a>
+          <button
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-black/15 lg:hidden"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
+
       <AnimatePresence>
         {open && (
           <motion.nav
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className={cn(
-              "border-b px-6 py-6 md:hidden",
-              light ? "border-zinc-200 bg-white" : "border-white/[0.06] bg-zinc-950"
-            )}
+            className="border-t border-black/5 bg-white px-5 py-6 lg:hidden"
           >
             {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className={cn("block py-2", light ? "text-zinc-700" : "text-zinc-300")}
+                className="block border-b border-black/5 py-3 text-base font-medium text-ink"
               >
                 {l.label}
               </a>
@@ -88,12 +63,9 @@ export function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className={cn(
-                "mt-4 block rounded-full py-3 text-center text-sm font-semibold",
-                light ? "bg-zinc-900 text-white" : "bg-white text-zinc-900"
-              )}
+              className="btn-rye mt-4 w-full"
             >
-              Contact Us
+              Get in touch
             </a>
           </motion.nav>
         )}

@@ -1,22 +1,145 @@
 export const navLinks = [
-  { label: "Capabilities", href: "#build" },
-  { label: "Platform", href: "#platform" },
-  { label: "Deployments", href: "#deployments" },
+  { label: "Corporate", href: "#corporate" },
+  { label: "Enterprise", href: "#enterprise" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#deployments" },
+  { label: "Team", href: "#team" },
   { label: "Contact", href: "#contact" },
 ];
 
-export const enterpriseLogos = [
-  "HSBC",
-  "Tower Hamlets",
-  "Fitness First",
-  "Barclays",
-  "NHS England",
-  "Deloitte",
-  "Unilever",
-  "British Airways",
-  "KPMG",
-  "Santander",
+export const divisions = [
+  {
+    id: "digital",
+    title: "MediaHive Digital",
+    cta: "Build With Us",
+    href: "#corporate",
+    desc: "Your entire digital presence, run by one team who understands how it all connects. Websites, web apps, SEO, landing pages, and CMS builds that convert visitors into customers.",
+    approach: "We start with strategy, not aesthetics. Every design decision is made with one goal: making your business impossible to ignore.",
+  },
+  {
+    id: "ai",
+    title: "MediaHive AI",
+    cta: "Automate Now",
+    href: "#enterprise",
+    desc: "Custom workflows, AI agents, and platform integrations connecting your website, CRM, email, and ops — so leads are captured, followed up, and reported without manual handoffs.",
+    approach: "We connect your tools into one joined-up system so every process works harder and every result compounds over time.",
+  },
+  {
+    id: "creative",
+    title: "MediaHive Creative",
+    cta: "Elevate Brand",
+    href: "#corporate",
+    desc: "Brand refreshes, campaign creative, social content systems, and AI-assisted visuals — bold identities and assets that cut through the noise and make your business unforgettable.",
+    approach: "From concept to delivery, we mix creativity with strategy to tell your story clearly and focus on impact, consistency, and results.",
+  },
+  {
+    id: "enterprise",
+    title: "MediaHive Enterprise",
+    cta: "Partner With Us",
+    href: "#enterprise",
+    desc: "Bespoke CRM systems, multi-location platforms, compliance-ready automation, and full-stack digital transformation for finance, public sector, and global organisations.",
+    approach: "We combine technology, creative, and strategy to bring next-generation thinking to enterprise engagements from £50k.",
+  },
 ];
+
+export const corporateServices = [
+  {
+    title: "Website Design & Build",
+    tag: "How We Make It Happen",
+    desc: "Corporate marketing sites, landing pages, and full redesigns — React, TypeScript, Framer Motion. UX, development, CMS setup, and launch in 4–8 weeks.",
+    href: "#services",
+  },
+  {
+    title: "Web Applications",
+    tag: "Rewards for You",
+    desc: "Client portals, booking systems, member apps, and admin dashboards — lean applications wired into your CRM and workflows. More visibility, better engagement, stronger conversions.",
+    href: "#services",
+  },
+  {
+    title: "Marketing Agency Systems",
+    tag: "Why It Works",
+    desc: "Multi-client campaign infrastructure, content workflows, social scheduling, and white-label reporting — the technology agencies need to scale delivery.",
+    href: "#services",
+  },
+  {
+    title: "SEO, Rebrand & Creative",
+    tag: "Click Magnet",
+    desc: "Technical SEO, brand identity, on-page content strategy, and campaign visuals — integrated with your site so everything compounds over time.",
+    href: "#services",
+  },
+];
+
+export const enterpriseHighlights = [
+  {
+    title: "Custom CRM Systems",
+    desc: "Bespoke pipelines, contact management, automations, and client portals — integrated with HubSpot, Salesforce, or built standalone.",
+    stat: "85% processes automated",
+  },
+  {
+    title: "AI & Workflow Automation",
+    desc: "n8n, Make, and custom middleware connecting web, CRM, email, and ops — compliance-ready for finance and public sector.",
+    stat: "8-week avg. ROI",
+  },
+  {
+    title: "Enterprise Deployments",
+    desc: "Full-stack programmes for HSBC, NHS England, Tower Hamlets, and Fitness First — websites, CRM, agents, and analytics at scale.",
+    stat: "£50k+ programmes",
+  },
+  {
+    title: "1:1 Strategy & Coaching",
+    desc: "Private AI roadmaps, stack audits, and executive guidance for leadership teams running complex digital transformation.",
+    stat: "Global delivery",
+  },
+];
+
+export const testimonials = [
+  {
+    quote: "Clear communication, fast turnaround, and results that actually match what they promised. Refreshing.",
+    name: "Sarah Mitchell",
+    role: "Head of Digital, Professional Services",
+  },
+  {
+    quote: "We wasted months with our previous agency. MediaHive achieved more in the first 90 days than they did in a year.",
+    name: "James Okonkwo",
+    role: "Chief Operating Officer",
+  },
+  {
+    quote: "They still treat our account like it is their most important one. The CRM and automation stack runs itself now.",
+    name: "Helen Whitfield",
+    role: "Director of Operations",
+  },
+  {
+    quote: "Within 60 days the investment had paid for itself twice over. I wish we had done it sooner.",
+    name: "David Chen",
+    role: "Practice Manager",
+  },
+];
+
+export const industryTags = [
+  "Finance & Banking",
+  "Public Sector",
+  "Fitness & Leisure",
+  "Healthcare",
+  "Professional Services",
+  "Marketing Agencies",
+  "Enterprise Retail",
+  "Insurance",
+];
+
+export const clientLogos = [
+  { name: "HSBC", logo: "/logos/hsbc.svg", subtitle: "Global Finance" },
+  { name: "NHS England", logo: "/logos/nhs.svg", subtitle: "Healthcare" },
+  { name: "Tower Hamlets", logo: "/logos/tower-hamlets.svg", subtitle: "London Borough" },
+  { name: "Fitness First", logo: "/logos/fitness-first.svg", subtitle: "Fitness & Leisure" },
+  { name: "Transport for London", logo: "/logos/tfl.svg", subtitle: "Public Transport" },
+  { name: "Canary Wharf", logo: "/logos/canary-wharf.svg", subtitle: "Group · London" },
+  { name: "British Airways", logo: "/logos/british-airways.svg", subtitle: "Aviation" },
+  { name: "Unilever", logo: "/logos/unilever.svg", subtitle: "Consumer Goods" },
+  { name: "Santander", logo: "/logos/santander.svg", subtitle: "Banking" },
+];
+
+/** @deprecated use clientLogos */
+export const enterpriseLogos = clientLogos.map((c) => c.name);
 
 export const socialPlatforms = [
   { name: "Instagram", desc: "Reels, Stories, carousels — AI-generated and scheduled to grow your reach." },
@@ -56,6 +179,7 @@ export const servicePillars = [
     id: "websites",
     title: "Website Design & Build",
     tag: "4–8 week delivery",
+    image: "/images/showcase-web.jpg",
     desc: "Corporate marketing sites, landing pages, and full redesigns — built with React, TypeScript, and Framer Motion. We handle UX, development, CMS setup, and launch.",
     deliverables: [
       "Corporate & marketing websites",
@@ -68,6 +192,7 @@ export const servicePillars = [
     id: "apps",
     title: "Web Applications",
     tag: "Scoped to your needs",
+    image: "/images/showcase-workflows.jpg",
     desc: "Client portals, booking systems, member apps, and internal dashboards — lean applications wired into your CRM and workflows. No bloated builds, only what your team will use.",
     deliverables: [
       "Client & member portals",
@@ -80,6 +205,7 @@ export const servicePillars = [
     id: "marketing-agency",
     title: "Marketing Agency Delivery",
     tag: "Full-stack or modular",
+    image: "/images/showcase-agency.jpg",
     desc: "We operate as your marketing technology partner — campaign sites, content systems, social workflows, reporting, and the infrastructure agencies need to deliver for clients at scale.",
     deliverables: [
       "Multi-client campaign infrastructure",
@@ -92,6 +218,7 @@ export const servicePillars = [
     id: "crm",
     title: "Custom CRM Systems",
     tag: "Built around your process",
+    image: "/images/showcase-crm.jpg",
     desc: "Pipelines, contact management, automations, and client portals tailored to how you sell and retain — integrated with HubSpot, Salesforce, or built standalone when off-the-shelf doesn't fit.",
     deliverables: [
       "Custom sales pipelines",
@@ -104,6 +231,7 @@ export const servicePillars = [
     id: "automation",
     title: "AI & Workflow Automation",
     tag: "n8n · Make · custom",
+    image: "/images/showcase-automation.jpg",
     desc: "Connect your website, CRM, email, and ops tools with automated workflows and AI agents — so leads are captured, followed up, and reported without manual handoffs.",
     deliverables: [
       "Lead capture & routing",
@@ -116,6 +244,7 @@ export const servicePillars = [
     id: "seo-brand",
     title: "SEO, Rebrand & Creative",
     tag: "Growth & identity",
+    image: "/images/showcase-rebrand.jpg",
     desc: "Technical SEO, content strategy, brand refreshes, and AI-assisted creative — integrated with your site and marketing stack so everything compounds over time.",
     deliverables: [
       "Technical SEO audits",
@@ -133,7 +262,7 @@ export const whatWeBuild = [
     title: "Website Design & Build",
     tag: "Web · UX · Launch",
     desc: "From single landing pages to full corporate sites — we design, build, and launch on modern stacks (React, Vite, Framer Motion). Includes mobile-first UX, performance optimisation, analytics setup, and handover documentation for your team.",
-    image: "/images/showcase-web.png",
+    image: "/images/showcase-web.jpg",
     highlights: ["React & TypeScript", "Framer Motion", "4–8 Week Delivery", "CMS Ready"],
   },
   {
@@ -141,7 +270,7 @@ export const whatWeBuild = [
     title: "Web Applications",
     tag: "Apps · Portals · Dashboards",
     desc: "Booking platforms, member portals, client dashboards, and internal tools — scoped and built to integrate with your existing CRM, payment, and auth systems. Typical projects run 8–14 weeks depending on complexity.",
-    image: "/images/showcase-workflows.png",
+    image: "/images/showcase-workflows.jpg",
     highlights: ["Client Portals", "Booking Systems", "Dashboards", "API Integrations"],
   },
   {
@@ -149,7 +278,7 @@ export const whatWeBuild = [
     title: "Marketing Agency Systems",
     tag: "Agency · Clients · Scale",
     desc: "Infrastructure for agencies managing multiple clients — campaign landing pages, automated content pipelines, social scheduling, white-label reporting, and onboarding workflows. We build the tech so your team focuses on strategy and creative.",
-    image: "/images/showcase-ai-visuals.png",
+    image: "/images/showcase-agency.jpg",
     highlights: ["Multi-Client Setup", "Campaign Pages", "Content Workflows", "Client Reporting"],
   },
   {
@@ -157,7 +286,7 @@ export const whatWeBuild = [
     title: "Custom CRM Systems",
     tag: "Sales · Ops · Retention",
     desc: "When HubSpot or Salesforce doesn't fit your process, we build bespoke CRM platforms — custom pipelines, contact management, automations, and client-facing portals. Can also extend existing CRMs with custom integrations.",
-    image: "/images/showcase-crm.png",
+    image: "/images/showcase-crm.jpg",
     highlights: ["Custom Pipelines", "Client Portals", "Automations", "CRM Integrations"],
   },
   {
@@ -165,7 +294,7 @@ export const whatWeBuild = [
     title: "AI & Automation",
     tag: "Workflows · Agents · Integrations",
     desc: "Practical automation using n8n, Make, Zapier, or custom code — lead routing, follow-up sequences, CRM sync, reporting, and AI agents for repetitive tasks. We map your current process first, then automate what saves real time.",
-    image: "/images/showcase-workflows.png",
+    image: "/images/showcase-automation.jpg",
     highlights: ["n8n & Make", "Lead Automation", "AI Agents", "Stack Integration"],
   },
   {
@@ -173,7 +302,7 @@ export const whatWeBuild = [
     title: "Social & Content Systems",
     tag: "Instagram · LinkedIn · TikTok",
     desc: "Automated content pipelines for brands and agencies — scheduling, multi-platform posting, and workflow-driven production. Not vanity metrics — systems that support your marketing team and reduce manual posting.",
-    image: "/videos/poster-social-pulse.png",
+    image: "/images/showcase-agency.jpg",
     highlights: ["Content Scheduling", "Multi-Platform", "Agency Workflows", "Brand Consistency"],
   },
   {
@@ -181,7 +310,7 @@ export const whatWeBuild = [
     title: "Website & Brand Redesign",
     tag: "UX · Identity · Refresh",
     desc: "Outdated site or brand? We audit what you have, redesign UX and visual identity, rebuild on a modern stack, and manage the launch — without losing SEO equity or breaking existing integrations.",
-    image: "/images/showcase-rebrand.png",
+    image: "/images/showcase-rebrand.jpg",
     highlights: ["UX Audit", "Visual Refresh", "Modern Rebuild", "SEO Preservation"],
   },
   {
@@ -189,7 +318,7 @@ export const whatWeBuild = [
     title: "SEO & Organic Growth",
     tag: "Search · Content · Traffic",
     desc: "Technical SEO fixes, site speed, schema markup, and content strategy aligned with your business goals. We work alongside your marketing team — not black-hat shortcuts, but sustainable organic growth.",
-    image: "/images/showcase-web.png",
+    image: "/images/showcase-web.jpg",
     highlights: ["Technical SEO", "Site Speed", "Content Strategy", "Analytics Setup"],
   },
   {
@@ -197,7 +326,7 @@ export const whatWeBuild = [
     title: "Creative & Visual Assets",
     tag: "Ads · Social · Campaign",
     desc: "On-brand ad creative, social assets, and campaign visuals — produced with AI-assisted workflows to speed up delivery without sacrificing quality. Useful for agencies and in-house teams scaling output.",
-    image: "/images/showcase-ai-visuals.png",
+    image: "/images/showcase-agency.jpg",
     highlights: ["Ad Creative", "Social Assets", "Campaign Visuals", "Brand Templates"],
   },
 ];
@@ -319,19 +448,17 @@ export const productVideos = [
     id: "social-pulse",
     title: "Social Pulse",
     subtitle: "Instagram, TikTok & social growth",
-    preset: "SOCIAL AI",
-    video: "/videos/social-pulse.mp4",
-    poster: "/videos/poster-social-pulse.png",
+    preset: "SOCIAL",
+    image: "/images/showcase-agency.jpg",
     description:
-      "Expand your brand on Instagram, TikTok, LinkedIn, and more — with AI-generated content, scheduling, and growth workflows built for your business.",
+      "Expand your brand on Instagram, TikTok, LinkedIn, and more — with content scheduling and growth workflows built for your business.",
   },
   {
     id: "hive-agents",
     title: "Hive Agents",
     subtitle: "Autonomous business workers",
-    preset: "AGENT SWARM",
-    video: "/videos/hive-agents.mp4",
-    poster: "/videos/poster-hive-agents.png",
+    preset: "AGENTS",
+    image: "/images/showcase-automation.jpg",
     description:
       "AI agents that handle lead follow-ups, customer support, content publishing, and ops — tailored to your exact processes.",
   },
@@ -339,9 +466,8 @@ export const productVideos = [
     id: "flow-engine",
     title: "Flow Engine",
     subtitle: "Custom workflow automation",
-    preset: "AUTO PIPELINE",
-    video: "/videos/flow-engine.mp4",
-    poster: "/videos/poster-flow-engine.png",
+    preset: "WORKFLOWS",
+    image: "/images/showcase-workflows.jpg",
     description:
       "Automated workflows connecting your website, social channels, CRM, and email — designed around how your business actually runs.",
   },
@@ -349,9 +475,8 @@ export const productVideos = [
     id: "signal-core",
     title: "Signal Core",
     subtitle: "Unified business intelligence",
-    preset: "DATA MESH",
-    video: "/videos/signal-core.mp4",
-    poster: "/videos/poster-signal-core.png",
+    preset: "DATA",
+    image: "/images/showcase-crm.jpg",
     description:
       "Pull data from social platforms, your website, and internal tools into one live dashboard your team can act on.",
   },
@@ -359,21 +484,19 @@ export const productVideos = [
     id: "cortex-analytics",
     title: "Cortex Analytics",
     subtitle: "Growth & performance intelligence",
-    preset: "FORECAST AI",
-    video: "/videos/cortex-analytics.mp4",
-    poster: "/videos/poster-cortex-analytics.png",
+    preset: "ANALYTICS",
+    image: "/images/showcase-finance.jpg",
     description:
-      "Track social growth, website conversions, and campaign ROI in real time — with predictive insights that show what's working before your competitors catch on.",
+      "Track social growth, website conversions, and campaign ROI in real time — with insights that show what's working.",
   },
   {
     id: "genesis-studio",
     title: "Genesis Studio",
-    subtitle: "Automated websites & landing pages",
+    subtitle: "Websites & landing pages",
     preset: "WEB BUILD",
-    video: "/videos/genesis-studio.mp4",
-    poster: "/videos/poster-genesis-studio.png",
+    image: "/images/showcase-web.jpg",
     description:
-      "AI-built websites and landing pages that convert — connected to your social channels, CRM, and automated follow-up workflows.",
+      "Corporate websites and landing pages that convert — connected to your social channels, CRM, and automated follow-up workflows.",
   },
 ];
 
@@ -387,10 +510,10 @@ export const capabilities = [
 ];
 
 export const industries = [
-  { name: "Finance & Banking", icon: "landmark", stat: "HSBC · Barclays", desc: "Compliant AI automation, client onboarding, and enterprise CRM systems." },
-  { name: "Public Sector", icon: "briefcase", stat: "Tower Hamlets", desc: "Digital citizen services, workflow automation, and secure infrastructure." },
+  { name: "Finance & Banking", icon: "landmark", stat: "HSBC · Santander", desc: "Compliant AI automation, client onboarding, and enterprise CRM systems." },
+  { name: "Public Sector", icon: "briefcase", stat: "Tower Hamlets · TfL", desc: "London borough digital services, citizen workflows, and secure infrastructure." },
   { name: "Fitness & Leisure", icon: "heart", stat: "Fitness First", desc: "Member CRM, engagement platforms, and multi-location operations." },
-  { name: "Healthcare", icon: "heart", stat: "Compliant workflows", desc: "Patient portals, appointment systems, and secure automation." },
+  { name: "Healthcare", icon: "heart", stat: "NHS England", desc: "Patient portals, appointment systems, and secure automation." },
   { name: "Professional Services", icon: "briefcase", stat: "Client portal builds", desc: "Websites, CRM, and automated client delivery pipelines." },
   { name: "Enterprise Retail", icon: "store", stat: "Omnichannel delivery", desc: "E-commerce sites, inventory workflows, and customer-facing apps." },
 ];
@@ -405,18 +528,18 @@ export const deployments = [
     metric: "85% faster processing",
     timeline: "6 months to full ROI",
     video: "/videos/deployment-quantaris.mp4",
-    poster: "/videos/poster-signal-core.png",
+    poster: "/images/showcase-finance.jpg",
   },
   {
     org: "Tower Hamlets",
-    vertical: "Public Sector",
+    vertical: "London Borough",
     system: "Genesis Studio + Hive Agents",
-    headline: "Digital citizen services and automated workflows",
+    headline: "Digital citizen services for a London borough council",
     result: "47% wait time reduction",
     metric: "£890k operational savings",
     timeline: "90-day measurable impact",
     video: "/videos/deployment-helix.mp4",
-    poster: "/videos/poster-hive-agents.png",
+    poster: "/images/showcase-workflows.jpg",
   },
   {
     org: "Fitness First",
@@ -427,26 +550,26 @@ export const deployments = [
     metric: "8-week full rollout",
     timeline: "Full stack live in 8 weeks",
     video: "/videos/deployment-volt.mp4",
-    poster: "/videos/poster-cortex-analytics.png",
+    poster: "/images/showcase-fitness.jpg",
   },
   {
-    org: "Barclays",
-    vertical: "Finance",
-    system: "Flow Engine + Signal Core",
-    headline: "Compliance-ready AI workflows and client onboarding",
-    result: "£1.1M pipeline added",
-    metric: "5x operational throughput",
-    timeline: "ROI in 8 weeks",
+    org: "NHS England",
+    vertical: "Healthcare",
+    system: "Hive Agents + Flow Engine",
+    headline: "Patient workflow automation and secure digital services",
+    result: "52% admin time saved",
+    metric: "6-week pilot rollout",
+    timeline: "Live across 3 trusts",
     video: "/videos/deployment-cipher.mp4",
-    poster: "/videos/poster-flow-engine.png",
+    poster: "/images/showcase-healthcare.jpg",
   },
 ];
 
 export const metrics = [
-  { value: 40, suffix: "+", label: "Enterprise projects delivered" },
-  { value: 8, suffix: " wks", label: "Avg. website build time" },
-  { value: 85, suffix: "%", label: "Client processes automated" },
-  { value: 50, suffix: "k+", label: "Programmes from (£)" },
+  { value: 40, suffix: "+", label: "Projects Delivered" },
+  { value: 8, suffix: " wks", label: "Avg. Build Time" },
+  { value: 85, suffix: "%", label: "Processes Automated" },
+  { value: 5, suffix: "+", label: "Years Expertise" },
 ];
 
 export const platformNodes = [
@@ -495,8 +618,19 @@ export const faqs = [
 ];
 
 export const leadership = [
-  { name: "Alexandra Chen", role: "CEO", bio: "Ex-Google AI. 15 years enterprise ML & growth." },
-  { name: "Marcus Okonkwo", role: "CTO", bio: "Ex-OpenAI. Production AI & automation architect." },
-  { name: "Sarah Whitfield", role: "Chief Strategy", bio: "Former McKinsey. Digital transformation lead." },
-  { name: "James Liu", role: "Head of Engineering", bio: "Built growth platforms at Stripe & Meta." },
+  {
+    name: "Amino",
+    role: "AI Strategic Advisor",
+    bio: "Guides enterprise AI strategy, architecture roadmaps, and scalable intelligence platforms.",
+  },
+  {
+    name: "Omar",
+    role: "AI Consultant",
+    bio: "Advises organisations on AI strategy, automation roadmaps, and digital transformation.",
+  },
+  {
+    name: "Hussain",
+    role: "Project Manager",
+    bio: "Leads delivery across websites, CRM builds, and automation programmes on time and on scope.",
+  },
 ];
