@@ -106,13 +106,20 @@ export function EnterpriseSection() {
                   data-project-card
                   className="group w-[85%] shrink-0 snap-start overflow-hidden rounded-2xl border border-black/8 bg-white shadow-sm sm:w-[calc(50%-8px)] lg:w-[calc(25%-12px)]"
                 >
-                  <div className="aspect-video overflow-hidden">
+                  <div className="relative aspect-video overflow-hidden bg-surface">
                     <img
                       src={d.poster}
                       alt={d.org}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
+                    <div className="absolute left-4 top-4 rounded-lg bg-white px-3 py-2 shadow-sm">
+                      <img
+                        src={d.logo}
+                        alt={d.org}
+                        className="h-5 w-auto max-w-[88px] object-contain"
+                      />
+                    </div>
                   </div>
                   <div className="p-5">
                     <p className="text-xs font-bold uppercase tracking-wider text-ink-light">

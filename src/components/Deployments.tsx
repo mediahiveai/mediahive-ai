@@ -20,14 +20,20 @@ export function Deployments() {
           {deployments.map((dep, i) => (
             <button
               key={dep.org}
+              type="button"
               onClick={() => setIdx(i)}
-              className={`shrink-0 rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
+              className={`flex shrink-0 items-center gap-2.5 rounded-full border px-4 py-2.5 text-sm font-semibold transition sm:px-5 ${
                 i === idx
                   ? "border-rye bg-rye text-black shadow-sm"
                   : "border-black/10 bg-white text-ink-muted hover:border-rye/40 hover:text-black"
               }`}
             >
-              {dep.org}
+              <img
+                src={dep.logo}
+                alt=""
+                className={`h-5 w-auto object-contain ${i === idx ? "max-w-[72px]" : "max-w-[64px] opacity-80"}`}
+              />
+              <span className="hidden sm:inline">{dep.org}</span>
             </button>
           ))}
         </div>
@@ -35,21 +41,28 @@ export function Deployments() {
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-black/8 bg-white shadow-sm">
             <AnimatePresence mode="wait">
-              <motion.video
-                key={d.video}
+              <motion.div
+                key={d.org}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster={d.poster}
-                className="aspect-video w-full object-cover"
+                transition={{ duration: 0.35 }}
+                className="relative aspect-video overflow-hidden bg-surface"
               >
-                <source src={d.video} type="video/mp4" />
-              </motion.video>
+                <img
+                  src={d.poster}
+                  alt={`${d.org} — ${d.vertical}`}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute left-5 top-5 rounded-xl bg-white px-4 py-3 shadow-md">
+                  <img
+                    src={d.logo}
+                    alt={d.org}
+                    className="h-7 w-auto max-w-[120px] object-contain"
+                  />
+                </div>
+              </motion.div>
             </AnimatePresence>
             <div className="border-t border-black/5 p-6">
               <p className="text-xs font-bold uppercase tracking-wider text-rye-dark">{d.vertical}</p>
