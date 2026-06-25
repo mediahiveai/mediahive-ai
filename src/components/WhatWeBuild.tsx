@@ -1,7 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { servicePillars } from "@/lib/data";
+
+function PillarImage({ src, alt }: { src: string; alt: string }) {
+  const [imgSrc, setImgSrc] = useState(src);
+  return (
+    <img
+      src={imgSrc}
+      alt={alt}
+      onError={() => setImgSrc("/images/showcase-web.jpg")}
+      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+      loading="lazy"
+    />
+  );
+}
 
 export function WhatWeBuild() {
   return (
@@ -33,13 +47,8 @@ export function WhatWeBuild() {
               transition={{ delay: i * 0.06 }}
               className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-rye/30"
             >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
+              <div className="aspect-[16/10] overflow-hidden bg-zinc-200">
+                <PillarImage src={s.image} alt={s.title} />
               </div>
               <div className="p-7">
                 <span className="inline-block rounded-full bg-rye px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-black">

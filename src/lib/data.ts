@@ -192,7 +192,7 @@ export const servicePillars = [
     id: "apps",
     title: "Web Applications",
     tag: "Scoped to your needs",
-    image: "/images/showcase-workflows.jpg",
+    image: "/images/showcase-crm.jpg",
     desc: "Client portals, booking systems, member apps, and internal dashboards — lean applications wired into your CRM and workflows. No bloated builds, only what your team will use.",
     deliverables: [
       "Client & member portals",
@@ -270,7 +270,7 @@ export const whatWeBuild = [
     title: "Web Applications",
     tag: "Apps · Portals · Dashboards",
     desc: "Booking platforms, member portals, client dashboards, and internal tools — scoped and built to integrate with your existing CRM, payment, and auth systems. Typical projects run 8–14 weeks depending on complexity.",
-    image: "/images/showcase-workflows.jpg",
+    image: "/images/showcase-crm.jpg",
     highlights: ["Client Portals", "Booking Systems", "Dashboards", "API Integrations"],
   },
   {
@@ -302,7 +302,7 @@ export const whatWeBuild = [
     title: "Social & Content Systems",
     tag: "Instagram · LinkedIn · TikTok",
     desc: "Automated content pipelines for brands and agencies — scheduling, multi-platform posting, and workflow-driven production. Not vanity metrics — systems that support your marketing team and reduce manual posting.",
-    image: "/images/showcase-agency.jpg",
+    image: "/images/showcase-fitness.jpg",
     highlights: ["Content Scheduling", "Multi-Platform", "Agency Workflows", "Brand Consistency"],
   },
   {
@@ -318,7 +318,7 @@ export const whatWeBuild = [
     title: "SEO & Organic Growth",
     tag: "Search · Content · Traffic",
     desc: "Technical SEO fixes, site speed, schema markup, and content strategy aligned with your business goals. We work alongside your marketing team — not black-hat shortcuts, but sustainable organic growth.",
-    image: "/images/showcase-web.jpg",
+    image: "/images/showcase-healthcare.jpg",
     highlights: ["Technical SEO", "Site Speed", "Content Strategy", "Analytics Setup"],
   },
   {
@@ -326,7 +326,7 @@ export const whatWeBuild = [
     title: "Creative & Visual Assets",
     tag: "Ads · Social · Campaign",
     desc: "On-brand ad creative, social assets, and campaign visuals — produced with AI-assisted workflows to speed up delivery without sacrificing quality. Useful for agencies and in-house teams scaling output.",
-    image: "/images/showcase-agency.jpg",
+    image: "/images/showcase-workflows.jpg",
     highlights: ["Ad Creative", "Social Assets", "Campaign Visuals", "Brand Templates"],
   },
 ];
@@ -476,7 +476,7 @@ export const productVideos = [
     title: "Signal Core",
     subtitle: "Unified business intelligence",
     preset: "DATA",
-    image: "/images/showcase-crm.jpg",
+    image: "/images/showcase-finance.jpg",
     description:
       "Pull data from social platforms, your website, and internal tools into one live dashboard your team can act on.",
   },
@@ -507,6 +507,13 @@ export const capabilities = [
   { title: "Custom CRM Systems", desc: "Bespoke pipelines and client management — standalone or integrated with existing CRMs." },
   { title: "AI & Workflow Automation", desc: "n8n, Make, and custom automations connecting web, CRM, email, and ops." },
   { title: "SEO, Rebrand & Creative", desc: "Technical SEO, brand refreshes, and campaign creative for sustained growth." },
+];
+
+export const enterpriseStats = [
+  { value: "40+", label: "Enterprise projects delivered" },
+  { value: "8 wks", label: "Avg. website build time" },
+  { value: "85%", label: "Client processes automated" },
+  { value: "50k+", label: "Programmes from (£)" },
 ];
 
 export const industries = [

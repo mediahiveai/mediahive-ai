@@ -6,6 +6,9 @@ import { Metrics } from "./components/Metrics";
 import { CorporateSection } from "./components/CorporateSection";
 import { EnterpriseSection } from "./components/EnterpriseSection";
 import { Divisions } from "./components/Divisions";
+import { PlatformCanvas } from "./components/PlatformCanvas";
+import { Capabilities } from "./components/Capabilities";
+import { ServicesExplorer } from "./components/ServicesExplorer";
 import { WhatWeBuild } from "./components/WhatWeBuild";
 import { Industries } from "./components/Industries";
 import { Deployments } from "./components/Deployments";
@@ -28,7 +31,10 @@ export default function App() {
         <Metrics />
         <CorporateSection />
         <EnterpriseSection />
+        <PlatformCanvas />
         <Divisions />
+        <Capabilities />
+        <ServicesExplorer />
         <WhatWeBuild />
         <Industries />
         <Deployments />

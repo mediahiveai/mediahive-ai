@@ -70,6 +70,13 @@ input, textarea, select, button {
   color: var(--color-ink-muted);
 }
 
+.gradient-text-enterprise {
+  background: linear-gradient(135deg, #0066ff 0%, #6366f1 50%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .btn-rye {
   display: inline-flex;
   align-items: center;
